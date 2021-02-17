@@ -1,7 +1,7 @@
 <?php
 
-$alarmCategorySource = 14887;
-$alarmCategoryVisu = 54132;
+$alarmCategorySource = 12345; // Bitte anpassen auf die Quellkategorie
+$alarmCategoryVisu = 12345; // Bitte anpassen auf die Zielkategorie
 
 DeleteCategoriesAndLinks($alarmCategoryVisu);
 CreateLinks($alarmCategorySource, $alarmCategoryVisu);
