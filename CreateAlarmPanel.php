@@ -53,6 +53,7 @@ function CreateLinks(int $sourceCategory, int $targetCategory, string $path = ""
 
             IPS_SetParent($newCategoryId, $targetCategory);
             IPS_SetName($newCategoryId, $child['ObjectName']);
+            IPS_SetPosition($newCategoryId, $child["ObjectPosition"]);
 
             // Copy sub category
             CreateLinks($child['ObjectID'], $newCategoryId, $path . $child['ObjectName'] . "/");
@@ -72,6 +73,7 @@ function CreateLinks(int $sourceCategory, int $targetCategory, string $path = ""
                     IPS_SetParent($linkId, $targetCategory);
                     IPS_SetName($linkId, $child['ObjectName']);
                     IPS_SetLinkTargetID($linkId, $instanceChildId);
+                    IPS_SetPosition($linkId, $child["ObjectPosition"]);
                 }
             }
         }
